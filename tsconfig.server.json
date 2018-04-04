@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "jsx": "react",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "./dist/server/",
+        "sourceMap": true,
+        "experimentalDecorators": true
+    },
+    "include": [
+        "./server/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "static",
+        "**/*.spec.ts"
+    ]
+}
