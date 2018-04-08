@@ -1,3 +1,5 @@
+const webpack = require('webpack'); //需要转译才能import
+
 //__dirname是node.js中的一个全局变量，它指向当前执行脚本所在的目录
 module.exports = {//注意这里是exports不是export
     mode: 'development',
@@ -20,7 +22,15 @@ module.exports = {//注意这里是exports不是export
             },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
         ]
-    }
+    },
+    /*
+    plugins: [
+        // OccurenceOrderPlugin is needed for webpack 1.x only
+        //new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        // Use NoErrorsPlugin for webpack 1.x
+        new webpack.NoEmitOnErrorsPlugin()
+    ]*/
     /*
     externals: {
         "react": "React",
